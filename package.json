@@ -1,6 +1,6 @@
 {
   "name": "@anderswestberg/mdpdf-with-title",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Markdown to PDF command line converter",
   "type": "module",
   "main": "./src/index.js",
