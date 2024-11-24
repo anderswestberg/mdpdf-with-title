@@ -174,7 +174,7 @@ function createPdf(html, options) {
 
   const tempHtmlPath = resolve(
     dirname(options.destination),
-    '_temp.html'
+    (options.title ? options.title : '_temp') + '.html'
   );
 
   return writeFile(tempHtmlPath, html)

@@ -23,6 +23,7 @@ const cli = meow(
 
     Options:
         --style=<filename>           A single css stylesheet you wish to apply to the PDF
+        --title=<title>              The document title
         --header=<filename>          A HTML (.html) file to inject into the header of the PDF
         --h-height=<height>          The height of the header section
         --footer=<filename>          A HTML (.html) file to inject into the footer of the PDF
@@ -130,6 +131,7 @@ const options = {
   defaultStyle: true,
   source: resolve(source),
   destination: resolve(destination),
+  title: resolve(title),
   styles: style ? resolve(style) : null,
   header: header ? resolve(header) : null,
   footer: footer ? resolve(footer) : null,

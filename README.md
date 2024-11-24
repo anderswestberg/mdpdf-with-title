@@ -1,7 +1,7 @@
 # MDPDF - Markdown to PDF converter
 [![NPM version](https://img.shields.io/npm/v/mdpdf.svg?style=flat-square)](https://www.npmjs.com/package/mdpdf) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 
-A command line markdown to pdf converter with support for page headers, footers, and custom stylesheets. Mdpdf is incredibly configurable and has a JavaScript API for more extravogant usage.
+A command line markdown to pdf converter with support for page headers, footers, and custom stylesheets. Mdpdf is incredibly configurable and has a JavaScript API for more extravogant usage. A fork of https://github.com/elliotblackburn/mdpdf simply adding a document title to options.
 
 For examples of how to use headers and footers, see the [examples directory](./examples).
 
@@ -33,6 +33,7 @@ Install locally to access the API.
 ## Options
 
 * `--style=<filename>`          - A single css stylesheet you wish to apply to the PDF
+* `--title=<title>`             - The document title
 * `--header=<filename>`         - A HTML (.html) file to inject into the header of the PDF
 * `--h-height=<height>`         - The height of the header section
 * `--footer=<filename>`         - A HTML (.html) file to inject into the footer of the PDF
@@ -97,6 +98,7 @@ mdpdf.convert(options).then((pdfPath) => {
 
 * `source` (**required**) - Full path to the source markdown file.
 * `destination` (**required**) - Full path to the destination (pdf) file.
+* `title` - Document title.
 * `styles` - Full path to a single css stylesheet which is applied last to the PDF.
 * `ghStyle` - Boolean value of whether or not to use the GitHub Markdown CSS, *defaults to false*.
 * `defaultStyle` - Boolean value of whether or not to use the additional default styles. These styles provide some things like a basic border and font size. *Defaults to false*.
