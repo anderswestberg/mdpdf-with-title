@@ -10,7 +10,7 @@
     "test": "mocha ./tests/index.js"
   },
   "bin": {
-    "mdpdf-title": "bin/index.js"
+    "mdpdf-with-title": "bin/index.js"
   },
   "files": [
     "bin",
